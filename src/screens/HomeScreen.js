@@ -1,7 +1,7 @@
 /** @format */
 
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import { LogoutUser } from "../store/AuthSlice"; // Import LogoutUser action
@@ -13,10 +13,23 @@ const HomeScreen = () => {
   const selector = useSelector((state) => state.AuthToken);
   console.log("selector value **** new ", selector);
 
+  {
+    /**
+   useEffect(() => {
+    //move dispath fuch to update component
+    const selector = useSelector((state) => state.AuthToken);
+    console.log("selector value **** new ", selector);
+  }, []);  //cousing error 
+ */
+  }
+
+  function handleLogout() {
+    dispatch(LogoutUser());
+  }
   return (
     <View>
       <Text>Home</Text>
-      <Pressable onPress={() => dispatch(LogoutUser())}>
+      <Pressable onPress={handleLogout}>
         <Text>Logout </Text>
       </Pressable>
       <Button
