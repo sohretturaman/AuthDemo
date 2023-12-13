@@ -11,9 +11,10 @@ import { Colors } from "./src/components/constants/styles";
 import HomeScreen from "./src/screens/HomeScreen";
 import ReducerStore from "./src/store/ReducerStore";
 
-import { Provider, useSelector } from "react-redux";
-import { useEffect } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import Async from "@react-native-async-storage/async-storage";
+import AppLoading from "expo-app-loading";
 const Stack = createNativeStackNavigator();
 
 function AuthStack() {
@@ -58,10 +59,31 @@ function Navigation() {
   );
 }
 
+function Root() {
+  const dispatch = useDispatch(); //uselogin func to save user
+  const [islogginIn, setIsLogginIn] = useState(true);
+  useEffect(() => {
+    const getTokenFromAsync = async () => {
+      const token = await Async.getItem("token");
+      if (token) {
+        dispatch({ type: "LOGIN", payload: token });
+      }
+      setIsLogginIn(false);
+    };
+    getTokenFromAsync();
+  }, []);
+
+  if (islogginIn) {
+    return <AppLoading />;
+  }
+
+  return <Navigation />;
+}
+
 export default function App() {
   return (
     <Provider store={ReducerStore}>
-      <Navigation />
+      <Root />
     </Provider>
   );
 }
