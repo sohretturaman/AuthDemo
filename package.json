@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
+    "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.6.2",
     "expo": "~49.0.14",
     "expo-status-bar": "~1.6.0",
@@ -21,12 +23,16 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-web": "~0.19.6",
+    "react-redux": "^9.0.4",
+    "redux": "^5.0.0",
     "sharp": "^0.33.0",
+    "sharp-cli": "^4.2.0",
     "webpack": "^5.89.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
-   
+    "@babel/core": "^7.20.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "private": true
 }
