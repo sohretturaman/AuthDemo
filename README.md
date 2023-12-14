@@ -1,5 +1,5 @@
 ### react native auth demo app
-#### screen record of android emulator =>
+#### screen record of android emulator 
 
 
 
