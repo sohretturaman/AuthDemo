@@ -4,7 +4,7 @@
 
 
 
-![authdemoapp](https://github.com/sohretturaman/AuthDemo/assets/81382575/c6034515-eb24-4588-8462-530595ec8904)gif
+![authdemoapp](https://github.com/sohretturaman/AuthDemo/assets/81382575/c6034515-eb24-4588-8462-530595ec8904)
 
   
 </p>
