@@ -1,5 +1,5 @@
 ### react native auth demo app
-https://github.com/sohretturaman/AuthDemo/assets/81382575/696ef0a3-a0a8-459b-a986-7025012ff0ab
+![authdemoapp](https://github.com/sohretturaman/AuthDemo/assets/81382575/a44df286-43a6-441a-af14-9630bb30a5fa)
   
 </p>
 <p align="center">
