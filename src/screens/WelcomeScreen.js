@@ -33,7 +33,22 @@ function WelcomeScreen() {
       <Text style={styles.title}>Welcome!</Text>
       <Text>You authenticated successfully!</Text>
       <Text>{messages}</Text>
-      <Button title="switch home" onPress={() => navigation.navigate("Home")} />
+
+      <View
+        style={{
+          margin: 10,
+          padding: 10,
+          maxWidth: 200,
+          alignSelf: "center",
+          borderRadius: 20,
+        }}
+      >
+        <Button
+          title="switch home"
+          color={"#A968B3"}
+          onPress={() => navigation.navigate("Home")}
+        />
+      </View>
     </View>
   );
 }

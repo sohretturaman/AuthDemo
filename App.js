@@ -14,7 +14,8 @@ import ReducerStore from "./src/store/ReducerStore";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Async from "@react-native-async-storage/async-storage";
-import AppLoading from "expo-app-loading";
+
+import { SplashScreen } from "expo-splash-screen";
 const Stack = createNativeStackNavigator();
 
 function AuthStack() {
@@ -61,21 +62,26 @@ function Navigation() {
 
 function Root() {
   const dispatch = useDispatch(); //uselogin func to save user
-  const [islogginIn, setIsLogginIn] = useState(true);
+
   useEffect(() => {
     const getTokenFromAsync = async () => {
-      const token = await Async.getItem("token");
-      if (token) {
-        dispatch({ type: "LOGIN", payload: token });
+      try {
+        await SplashScreen.preventAutoHideAsync();
+        const token = await Async.getItem("token");
+        if (token) {
+          dispatch({ type: "LOGIN", payload: token });
+        }
+        await SplashScreen.preventAutoHideAsync();
+      } catch (error) {
+        console.log("an error has been occured", error.message);
+      } finally {
+        //SplashScreen.hideAsync();
+        console.log("finished");
       }
-      setIsLogginIn(false);
     };
+
     getTokenFromAsync();
   }, []);
-
-  if (islogginIn) {
-    return <AppLoading />;
-  }
 
   return <Navigation />;
 }
@@ -87,3 +93,5 @@ export default function App() {
     </Provider>
   );
 }
+
+//  "expo-app-loading"; it is deprecated ,instead use splash screen

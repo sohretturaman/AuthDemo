@@ -28,14 +28,35 @@ const HomeScreen = () => {
   }
   return (
     <View>
-      <Text>Home</Text>
-      <Pressable onPress={handleLogout}>
-        <Text>Logout </Text>
+      <Text>Home page</Text>
+      <Pressable
+        onPress={handleLogout}
+        style={{
+          margin: 10,
+          padding: 10,
+          maxWidth: 200,
+          alignSelf: "center",
+          borderRadius: 5,
+          backgroundColor: "#A968B3",
+        }}
+      >
+        <Text style={{ color: "white", fontWeight: "bold" }}>Logout </Text>
       </Pressable>
-      <Button
-        title="switch welcome"
-        onPress={() => navigation.navigate("Welcome")}
-      />
+      <View
+        style={{
+          margin: 10,
+          padding: 10,
+          maxWidth: 200,
+          alignSelf: "center",
+          borderRadius: 20,
+        }}
+      >
+        <Button
+          title="switch welcome"
+          color={"#A968B3"}
+          onPress={() => navigation.navigate("Welcome")}
+        />
+      </View>
     </View>
   );
 };
