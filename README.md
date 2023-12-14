@@ -1,10 +1,10 @@
 ### react native auth demo app
+
 ![authdemoapp](https://github.com/sohretturaman/AuthDemo/assets/81382575/a44df286-43a6-441a-af14-9630bb30a5fa)
   
 </p>
 <p align="center">
   <a href="https://github.com/expo/examples">
-    <img alt="create-react-native-app" src="./.gh-assets/banner.svg">
     <h1 align="center">Create React Native App</h1>
   </a>
 </p>
