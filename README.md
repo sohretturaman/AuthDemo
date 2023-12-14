@@ -1,5 +1,5 @@
-### react native expense tricker app
-https://github.com/sohretturaman/expense-tracker-app/assets/81382575/f25ef4e6-25e0-47f3-9bc4-e30fc56eebf6
+### react native auth demo app
+![authdemoapp](https://github.com/sohretturaman/AuthDemo/assets/81382575/696ef0a3-a0a8-459b-a986-7025012ff0ab)
   
 </p>
 <p align="center">
