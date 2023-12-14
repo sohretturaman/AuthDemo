@@ -1,5 +1,5 @@
 ### react native auth demo app
-##screen record of android emulator =>https://github.com/sohretturaman/AuthDemo/assets/81382575/a44df286-43a6-441a-af14-9630bb30a5fa
+## screen record of android emulator => https://github.com/sohretturaman/AuthDemo/assets/81382575/a44df286-43a6-441a-af14-9630bb30a5fa
 
 
   
